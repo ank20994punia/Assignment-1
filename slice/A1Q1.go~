@@ -1,0 +1,47 @@
+package main
+
+import (
+"fmt"
+)
+
+func frequency_count(userInput int) []int{
+digits :=make([]int,10)
+i:=userInput
+
+for i>0{
+
+digits[i%10]++
+
+i=i/10
+}
+//fmt.Println("Frequency of each digit in the user Input is :")
+//fmt.Println(digits)
+return digits
+}
+
+func main(){
+
+digits :=make([]int,10)
+var userInput int
+fmt.Println(digits)
+fmt.Println("Enter the series of digits")
+fmt.Scanln(&userInput)
+
+
+/*i:=userInput
+
+for i>0{
+
+digits[i%10]++
+
+i=i/10
+}
+fmt.Println("Frequency of each digit in the user Input is :")
+fmt.Println(digits)*/
+frequency:=frequency_count(userInput)
+fmt.Println("Frequency of each digit in the user Input is :")
+fmt.Println(frequency)
+
+}
+
+
