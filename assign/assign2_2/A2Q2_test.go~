@@ -1,0 +1,31 @@
+package A2Q2
+
+import ("testing"
+         "fmt"
+         "reflect")
+
+func TestDoubleAndPrint(t *testing.T) {
+        
+     
+        
+       input:=[]string{"go","go","went","go","gone","go"}
+
+
+       fmt.Println(input)
+       
+       output:=map[string]int{
+           "go" :3,
+           "went" :1,
+           "gone" :1,
+       }
+       frequency:=frequency_calculator(input)
+      if(reflect.DeepEqual(output,frequency)==false){
+          t.Fatal("failed")}
+      //if(reflect.DeepEqual(output,frequency)==true){
+         // t.Fatal("OK")}
+       
+
+}
+
+
+
