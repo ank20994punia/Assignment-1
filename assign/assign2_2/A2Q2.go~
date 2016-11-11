@@ -1,0 +1,41 @@
+package A2Q2
+
+/*import(
+
+"sort"
+)*/
+
+func frequency_calculator(words []string) map[string]int{
+word_frequency:=make(map[string]int)
+for _,word:=range words{
+       _,value:=word_frequency[word]
+      
+        if value==true{
+              word_frequency[word]+=1
+}else{
+              word_frequency[word]=1
+}
+}
+return word_frequency
+}
+
+/*func Sorted_output(output map[string]int) []int{
+n := map[int][]string{}
+var a []int
+        for key, value := range frequency {
+                n[value] = append(n[value], key)
+        }
+        for key := range n {
+                a = append(a, key)
+        }
+        sort.Sort(sort.Reverse(sort.IntSlice(a)))
+        //for _, key := range a {
+                //for _, s := range n[key] {
+                        //fmt.Printf("%s - %d\n", s, key)
+               // }
+       // }
+         return a
+}*/
+
+
+
